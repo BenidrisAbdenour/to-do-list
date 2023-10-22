@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>To do list</title>
+  </head>
+  <body>
+    <h2>To Do List</h2>
+    <!--! the frame //-->
+    <div class="frame">
+      <!--! the header -->
+      <div class="header">
+        <p id="title">My Tasks</p>
+        <button id="btn"><i class="bx bx-plus-circle"></i></button>
+      </div>
+      <!--!/ the header //-->
+      <!--! tasks -->
+      <div id="tasks">
+        <!--! task -->
+        <div class="task">
+          <!--! task info -->
+          <div class="task-info">
+            <p>Go to sleep at 10pm</p>
+            <div>
+              <i class="bx bx-calendar"></i>
+              <span>10/19/2023</span>
+            </div>
+          </div>
+          <!--!/ task info //-->
+          <!--! task actions -->
+          <div class="task-action">
+            <button class="round-btn red"><i class="bx bxs-trash"></i></button>
+            <button class="round-btn green" onclick="isDone()"><i class="bx bx-calendar-check"></i></button>
+            <button class="round-btn purple"><i class="bx bxs-edit"></i></button>
+          </div>
+          <!--!/ task actions -->
+        </div>
+        <!--!/ task //-->
+      </div>
+      <!--!/ tasks //-->
+    </div>
+    <!--!/ the frame //-->
+    <!--! center div -->
+    <div id="center">
+      <!--! Modal -->
+      <div id="modal">
+        <!--! Form -->
+        <div class="form">
+          <input id="newtask" type="text" placeholder="Enter your task here" />
+          <button id="add">ADD</button>
+        </div>
+        <!--!/ Form //-->
+      </div>
+      <!--!/ Modal //-->
+      <div>
+        <button id="close">Close</button>
+      </div>
+    </div>
+    <!--!/ center div //-->
+    <script src="main.js"></script>
+  </body>
+</html>
