@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+body {
+  background-color: rgb(237, 223, 207);
+}
+
+.frame {
+  width: 600px;
+  background: rgb(43, 5, 55);
+  margin: auto;
+  margin-top: 30px;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  color: rgb(50, 0, 57);
+}
+
+.header {
+  background: rgba(227, 173, 239, 0.2);
+  height: 80px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.round-btn:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+#tasks {
+  background: rgb(35, 0, 32);
+  border-radius: 10px;
+  padding: 1px;
+  margin: 5px;
+  box-shadow: rgba(255, 255, 255, 0.02) 0px 14px 28px, rgba(255, 255, 255, 0.02) 0px 10px 10px;
+}
+
+.task {
+  background: rgba(227, 173, 239, 0.2);
+  height: 80px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/**cursor effect
+ .task::after,
+.task::before {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+
+#tasks:hover > .task::after {
+  opacity: 1;
+}
+
+.task:hover::before {
+  opacity: 1;
+}
+
+.task::before {
+  background: radial-gradient(800px circle at 100px 100px, rgba(255, 255, 255, 0.06), transparent 40%);
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.task::after {
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.05), transparent 40%);
+  z-index: 1;
+}
+*/
+
+/*#input {
+  width: 400px;
+  height: 35px;
+  margin-right: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  font-size: 18px;
+  color: black;
+  font-weight: 700;
+}*/
+
+#btn {
+  background-color: transparent;
+  border: none;
+  transition: 0.2s;
+  font-weight: 800;
+  font-size: 30px;
+  color: rgb(216, 68, 137);
+  margin-top: 8px;
+  margin-left: 200px;
+}
+
+#btn:hover {
+  background: transparent;
+  color: white;
+}
+
+.round-btn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  margin: 5px;
+  color: white;
+  font-size: 20px;
+  border: 0.5px solid rgba(255, 255, 255, 0.233);
+  transition: 0.3s;
+  line-height: 1;
+}
+
+.red {
+  background-color: rgb(161, 10, 45);
+}
+
+.green {
+  background-color: rgb(7, 63, 32);
+}
+
+.before {
+  background-color: white;
+  color: black;
+}
+
+.after {
+  background-color: rgb(7, 63, 32);
+  color: white;
+}
+
+.purple {
+  background-color: rgb(70, 5, 121);
+}
+
+.btns {
+  margin-left: 200px;
+}
+
+.task-info {
+  width: 65%;
+  color: white;
+}
+p {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+p#title {
+  margin-left: 230px;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+span {
+  font-size: 16px;
+  font-weight: 800;
+  color: rgb(208, 142, 201);
+}
+
+#center {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 5, 55, 0.4);
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+}
+
+#modal {
+  width: 700px;
+  height: 160px;
+  background-color: rgb(43, 5, 55);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 250px;
+}
+
+.form {
+  width: 650px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  border: 0.5px solid rgba(255, 255, 255, 0.233);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form input {
+  width: 400px;
+  height: 35px;
+  margin-right: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  font-size: 18px;
+  color: black;
+  font-weight: 700;
+}
+
+#add {
+  width: 50px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.914);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+#add:hover {
+  background-color: rgb(112, 15, 71);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#close {
+  width: 500px;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 25px;
+  margin-left: 490px;
+  transition: 0.2s;
+}
+
+#close:hover {
+  background-color: rgb(112, 15, 15);
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+::placeholder {
+  color: white;
+}
